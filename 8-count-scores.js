@@ -33,5 +33,9 @@ countScores(peeps); //=> { Pete: 4, Mike: 4, Dexter: 6 }
 
 
 function countScores(people) {
-
+  return people.reduce(function(allPeople, person) {
+    if (person in allPeople) {
+      allPeople[person]
+    }
+  }, {})
 }

@@ -16,5 +16,19 @@ adults(ppl); // => [ 'Khalid Robinson', 'Post Malone' ]
 ***********************************************************************/
 
 function adults(people) {
-  
+  let filteredArray =  people.filter((person) => {
+    return person.age >= 18;
+  })
+  return filteredArray.map((person) => {
+    return person.name;
+  })
 }
+
+const ppl = [
+  {name: 'Khalid Robinson', age: 22},
+  {name: 'Ariel Winter', age: 20},
+  {name: 'Post Malone', age: 25},
+  {name: 'Willow Smith', age: 17}
+];
+
+console.log(adults(ppl));
